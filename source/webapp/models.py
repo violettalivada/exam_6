@@ -7,7 +7,7 @@ STATUS_CHOICES = [
 ]
 
 
-class Guestbook(models.Model):
+class GuestBook(models.Model):
     author = models.CharField(max_length=40, null=False, blank=False, default='Unknown', verbose_name='Автор')
     email = models.EmailField(max_length=50, null=False, blank=False, verbose_name='Email автора')
     text = models.TextField(max_length=3000, null=False, blank=False, verbose_name='Текст')
