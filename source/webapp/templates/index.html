@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Guest Book{% endblock %}
+
+{% block content %}
+    <h1>Статьи:</h1>
+    {% for guest_book in guest_books %}
+        <h3><p>{{ guest_book.author }} ({{ guest_book.email }})</p></h3>
+        <p>{{ guest_book.text }}</p>
+    {% endfor %}
+{% endblock %}
