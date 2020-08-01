@@ -9,7 +9,7 @@ def index_view(request):
     if is_admin:
         data = GuestBook.objects.all()
     else:
-        data = GuestBook.objects.filter(status='active')
+        data = GuestBook.objects.filter(status='active').order_by('-created_at')
     return render(request, 'index.html', context={
         'guest_books': data
     })

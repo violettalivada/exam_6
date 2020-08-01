@@ -3,10 +3,10 @@ from .models import GuestBook
 
 
 class GuestBookAdmin(admin.ModelAdmin):
-    list_display = ['pk', 'author', 'email', 'created_at']
-    list_filter = ['author', 'created_at']
+    list_display = ['pk', 'author', 'email']
+    list_filter = ['author']
     search_fields = ['author']
-    fields = ['author', 'email', 'text', 'created_at', 'updated_at']
+    fields = ['author', 'email', 'text']
 
 
 admin.site.register(GuestBook, GuestBookAdmin)
