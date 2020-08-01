@@ -3,11 +3,30 @@
 {% block title %}Guest Book{% endblock %}
 
 {% block content %}
-    <h1>Гостевая книга</h1>
+    <div class="title mt-5"><h1>Гостевая книга</h1></div>
     {% for guest_book in guest_books %}
-        <h3><p>{{ guest_book.author }} ({{ guest_book.email }})</p></h3>
-        <p>{{ guest_book.text }}</p>
-        <p><a href="{% url 'guest_book_update' guest_book.pk %}">Редактировать запись</a></p>
-        <p><a href="{% url 'guest_book_delete' guest_book.pk %}">Удалить запись</a></p>
+        <div class="row">
+            <div class="col col-12 col-md-6 col-xl-4">
+                <div class="card  mb-4" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ guest_book.author }}({{ guest_book.email }})</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{guest_book.created_at}}</h6>
+                    <p class="card-text">{{ guest_book.text }}</p>
+                    <a href="{% url 'guest_book_update' guest_book.pk %}" class="card-link">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                        </svg>
+                    </a>
+                    <a href="{% url 'guest_book_delete' guest_book.pk %}" class="card-link">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5v-1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h5v2.5A1.5 1.5 0 0 0 10.5 6H13v2h1V6L9 1z"/>
+  <path fill-rule="evenodd" d="M11 11.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}

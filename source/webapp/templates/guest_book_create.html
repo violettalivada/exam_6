@@ -6,5 +6,5 @@
     <h1>Добавить новую запись</h1>
 
     {% url "guest_book_create" as action_url %}
-    {% include 'partial/form.html' with action_url=action_url form_method='post' %}
+    {% include 'partial/form.html' with action_url=action_url form_method='post' button_text='Сохранить' %}
 {% endblock %}
