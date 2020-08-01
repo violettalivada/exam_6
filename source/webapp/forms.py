@@ -6,3 +6,5 @@ class GuestBookForm(forms.Form):
     email = forms.EmailField(max_length=50, required=True, label='Email автора')
     text = forms.CharField(max_length=3000, required=True, label="Текст", widget=forms.Textarea)
 
+
+
