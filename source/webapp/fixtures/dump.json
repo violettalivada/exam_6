@@ -1,0 +1,80 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 1,
+  "fields": {
+    "author": "Author 0",
+    "email": "author@email.com",
+    "text": "some text here",
+    "created_at": "2020-08-01T00:36:00.412Z",
+    "updated_at": "2020-08-01T00:36:00.412Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 2,
+  "fields": {
+    "author": "Author 1",
+    "email": "author@email.com",
+    "text": "some text here",
+    "created_at": "2020-08-01T00:36:00.550Z",
+    "updated_at": "2020-08-01T00:36:00.550Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 3,
+  "fields": {
+    "author": "Author 2",
+    "email": "author@email.com",
+    "text": "some text here",
+    "created_at": "2020-08-01T00:36:00.651Z",
+    "updated_at": "2020-08-01T00:36:00.651Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 4,
+  "fields": {
+    "author": "Author 3",
+    "email": "author@email.com",
+    "text": "some text here",
+    "created_at": "2020-08-01T00:36:00.760Z",
+    "updated_at": "2020-08-01T00:36:00.761Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 5,
+  "fields": {
+    "author": "Author 4",
+    "email": "author@email.com",
+    "text": "some text here",
+    "created_at": "2020-08-01T00:36:00.862Z",
+    "updated_at": "2020-08-01T00:36:00.862Z",
+    "status": "active"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$jMp0Sp0VqMvv$gjEy2cLX8JpkFYuo6Nd3M1YIwlisELB1o/evJE0UTXg=",
+    "last_login": "2020-08-01T00:16:50.390Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-01T00:16:30.945Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
