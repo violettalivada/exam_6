@@ -65,3 +65,14 @@ def guest_book_update_view(request, pk):
             })
     else:
         return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])
+
+
+def guest_book_delete_view(request, pk):
+    guest_book = get_object_or_404(GuestBook, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'guest_book_delete.html', context={'guest_book': guest_book})
+    elif request.method == 'POST':
+        guest_book.delete()
+        return redirect('index')
+    else:
+        return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])

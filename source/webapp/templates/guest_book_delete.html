@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete{% endblock %}
+
+{% block menu %}
+    <li><a href="{% url 'index'  %}">Отмена</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Вы уверены, что хотите удалить данную запись?</h1>
+    <p>By: {{ guest_book.author }} | {{ guest_book.created_at }}</p>
+    <form action="{% url "guest_book_delete" guest_book.pk %}" method="post">
+        {% csrf_token %}
+        <p><input type="submit" value="Да"></p>
+        <p><a href="{% url 'index' %}">Нет</a></p>
+    </form>
+    <h3>Содержимое статьи: </h3>
+    <p>{{ guest_book.text }}</p>
+{% endblock %}

@@ -20,6 +20,7 @@ from webapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view, name='index'),
-    path('guest_book/add/', guest_book_create_view, name='guest_book_create'),
-    path('guest_book/<int:pk>/update/', guest_book_update_view, name='guest_book_update'),
+    path('add/', guest_book_create_view, name='guest_book_create'),
+    path('<int:pk>/update/', guest_book_update_view, name='guest_book_update'),
+    path('<int:pk>/delete/', guest_book_delete_view, name='guest_book_delete'),
 ]

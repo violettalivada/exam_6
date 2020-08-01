@@ -7,6 +7,7 @@
     {% for guest_book in guest_books %}
         <h3><p>{{ guest_book.author }} ({{ guest_book.email }})</p></h3>
         <p>{{ guest_book.text }}</p>
-        <p><a href="{% url 'guest_book_update' pk=guest_book.pk %}">Редактировать запись</a></p>
+        <p><a href="{% url 'guest_book_update' guest_book.pk %}">Редактировать запись</a></p>
+        <p><a href="{% url 'guest_book_delete' guest_book.pk %}">Удалить запись</a></p>
     {% endfor %}
 {% endblock %}
